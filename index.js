@@ -17,10 +17,12 @@ app.use(express.json());
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
-app.use(cors({
-    origin: 'https://unladkomunidad.onrender.com',
-    credentials: true
-}));
+app.use(cors(
+//     {
+//     origin: 'https://unladkomunidad.onrender.com',
+//     credentials: true
+// }
+));
 
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
