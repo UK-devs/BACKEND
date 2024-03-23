@@ -50,7 +50,7 @@ export const login = async (req, res, next) => {
             { id: user._id, isAdmin: user.isAdmin, role: user.role },
             process.env.JWT_SECRET
         );
-        res.cookie('access_token', token, { httpOnly: true })
+        res.cookie('access_token', token, { httpOnly: true, maxAge: 36000000 })
             .status(200)
             .json({
                 status: 200,
