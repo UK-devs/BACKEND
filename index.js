@@ -45,6 +45,8 @@ app.use((obj, req, res, next) => {
 const connectMongoDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URL);
+        ssl:true;
+        sslValidate: true;
         console.log("Connected to UnladKomunidad Database");
     } catch (error) {
         throw error;
