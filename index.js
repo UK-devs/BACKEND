@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(cors(
     {
-    origin: 'https://unladkomunidad.onrender.com',
+    origin: 'https://unladkomunidad-2xnq.onrender.com',
     credentials: true
 }
 ));
